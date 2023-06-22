@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="micss.css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <style>
+      table thead{
+        background-color: red;
+      }
+    </style>=
+  </head>
+  <body>  
+    <div class="container-fluid mt-5 p-3">
+      <div class="container mt-0 justify-content-center align-items-center text-center">
+        <h2>LEYENDO DATOS DESDE EL SERVIDOR</h2>
+        <h5>DATOS SOBRE EL JSON EMISORAS</h5>
+        <input type="button" class="btn btn-success" onclick="consumirservicio();" value="CONSUMIR SERVICIO" id="btnconsumir">   
+        <div class="form-group">
+          <label for="searchInput">FILTRAR POR TITULO :</label>
+          <input type="text" class="form-control" id="buscartitulo" placeholder="TITULO">
+          <input type="button" class="btn btn-primary" onclick="filtrar();" value="FILTRAR TITULO" id="btnfiltrar">  
+        </div>
+        <div class="form-group">
+          <label for="Id">FILTRAR POR ID :</label>
+          <input type="text" class="form-control" id="buscarid" placeholder="ID">
+        </div>        
+        <input type="button" class="btn btn-primary" onclick="filtrardos();" value="FILTRAR ID" id="btnfiltrardos">  
+        <br><br>
+        <div class="container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">TITULO</th>
+                <th scope="col">ID</th>
+                <th scope="col">DESCRIPCION</th>
+                <th scope="col">FORMATO</th>
+                <th scope="col">FONDO</th>
+                <th scope="col">POSTER</th>
+                <th scope="col">URL</th>
+                <th scope="col">GUID</th>
+                <th scope="col">CATEGORIA</th>
+                <th scope="col">ETIQUETA</th>
+              </tr>
+            </thead>
+            <tbody id="data">
+              <!--SE agregaran todos los elementos por javascript-->
+            </tbody>
+          </table>  
+        </div>        
+  
+      </div>
+    </div>
+    <hr>	
+  </body>
+</html>
